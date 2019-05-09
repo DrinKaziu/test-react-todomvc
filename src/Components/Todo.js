@@ -8,15 +8,15 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'; //allows us to have secondary list items on the right side
 
 
-function Todo({task, completed}) {
+function Todo({id, task, completed, removeTodo, toggleComplete}) {
   return (
     <ListItem>
-      <Checkbox checked={completed} />
+      <Checkbox checked={completed} onChange={() => toggleComplete(id)}/>
       <ListItemText style={{textDecoration: completed ? 'line-through' : 'none'}}>
         {task}
       </ListItemText>
       <ListItemSecondaryAction>
-        <IconButton aria-label='Delete'>
+        <IconButton aria-label='Delete' onClick={() => removeTodo(id)}>
           <DeleteIcon />
         </IconButton>
       </ListItemSecondaryAction>

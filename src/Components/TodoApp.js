@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import uuid from 'uuid/v4';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import AppBar from '@material-ui/core/AppBar';
@@ -18,7 +19,15 @@ function TodoApp() {
   const [todos, setTodos] = useState(initialTodos);
 
   const addTodo = newTodoText => {
-    setTodos([...todos, {id: 4, task: newTodoText, completed: false}])
+    setTodos([...todos, {id: uuid(), task: newTodoText, completed: false}])
+  }
+  const removeTodo = todoId => {
+    const updatedTodos = todos.filter(todo => todo.id !== todoId);
+    setTodos(updatedTodos);
+  }
+  const toggleComplete = todoId => {
+    const updatedTodos = todos.map(todo => todo.id === todoId ? {...todo, completed: !todo.completed} : todo)
+    setTodos(updatedTodos);
   }
   return (
     <Paper 
@@ -38,7 +47,11 @@ function TodoApp() {
             </Toolbar>
           </AppBar>
           <TodoForm addTodo={addTodo} />
-          <TodoList todos={todos} />
+          <TodoList 
+            todos={todos} 
+            removeTodo={removeTodo} 
+            toggleComplete={toggleComplete}
+          />
         </Grid>
       </Grid>
     </Paper>
