@@ -1,6 +1,6 @@
 IMPLEMENTATION:
 
-This project was built with React.JS and React Hooks. The state is managed with the useState Hook as well as well a custom hook, useInputState. Therefore, there was no need for class components. 
+This project was built with React.JS and React Hooks. The state is managed with the useState Hook as well as a custom hook, useInputState. Therefore, there was no need for class components. 
 
 Most of the styling was done with Material-ui with a little custom CSS to show the delete button on hover.
 
