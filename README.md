@@ -1,11 +1,13 @@
-IMPLEMENTATION
+IMPLEMENTATION:
+
 This project was built with React.JS and React Hooks. The state is managed with the useState Hook as well as well a custom hook, useInputState. Therefore, there was no need for class components. 
 
 Most of the styling was done with Material-ui with a little custom CSS to show the delete button on hover.
 
 The input validation was done with the react-material-ui-form-validator npm package
 
-CREDIT
+CREDIT:
+
 Created by Drin Kaziu
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
