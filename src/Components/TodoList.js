@@ -10,12 +10,12 @@ function TodoList(props) {
   return (
     <Paper>
       <List>
-      {props.todos.map(todo => (
-        <div key={todo.id}>
-          <Todo {...todo}/>
-          <Divider />
-        </div>
-      ))}
+        {props.todos.map(todo => (
+          <div key={todo.id}>
+            <Todo {...todo}/>
+            <Divider />
+          </div>
+        ))}
       </List>
     </Paper>
   )
