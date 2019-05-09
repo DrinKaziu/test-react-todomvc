@@ -1,0 +1,9 @@
+.Todo:hover .Todo-delete-btn {
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+} 
+
+.Todo-delete-btn {
+  opacity: 0;
+}
+
