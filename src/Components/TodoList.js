@@ -10,14 +10,14 @@ function TodoList({ todos, removeTodo, toggleComplete }) {
   return (
     <Paper>
       <List>
-        {todos.map(todo => (
+        {todos.map((todo, idx) => (
           <div key={todo.id}>
             <Todo 
               {...todo} 
               removeTodo={removeTodo} 
               toggleComplete={toggleComplete}
             />
-            <Divider />
+            {idx < todos.length - 1 && <Divider />}
           </div>
         ))}
       </List>
