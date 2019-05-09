@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Grid from '@material-ui/core/Grid';
 
 import TodoList from './TodoList';
 import TodoForm from './TodoForm';
@@ -28,13 +29,18 @@ function TodoApp() {
         backgroundColor: '#fafafa'
       }}
     >
-      <AppBar color='default' position='static' style={{height: '64px'}}>
-        <Toolbar>
-          <Typography color='inherit'>To-Do</Typography>
-        </Toolbar>
-      </AppBar>
-      <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} />
+      
+      <Grid container justify='center' style={{marginTop: '1rem'}}>
+        <Grid item xs={11} md={8} lg={4}>
+          <AppBar color='default' position='static' style={{height: '64px', marginTop: '1rem'}}>
+            <Toolbar>
+              <Typography color='inherit'>To-Do</Typography>
+            </Toolbar>
+          </AppBar>
+          <TodoForm addTodo={addTodo} />
+          <TodoList todos={todos} />
+        </Grid>
+      </Grid>
     </Paper>
   )
 }
