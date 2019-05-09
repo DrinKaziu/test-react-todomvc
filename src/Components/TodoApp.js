@@ -43,14 +43,16 @@ function TodoApp() {
         <Grid item xs={11} md={8} lg={4}>
           <AppBar color='primary' position='static' style={{height: '64px', marginTop: '1rem'}}>
             <Toolbar>
+            {todos.length === 1 
+              ?
               <Typography color='inherit'>
-                {todos.length === 1 
-                  ?  
-                  <p><strong>{todos.length}</strong> task left</p> 
-                  : 
-                  <p><strong>{todos.length}</strong> tasks left</p>
-                }
+                <strong>{todos.length}</strong> task left
               </Typography>
+              : 
+              <Typography color='inherit'>
+                <strong>{todos.length}</strong> tasks left
+              </Typography>
+            }
             </Toolbar>
           </AppBar>
           <TodoForm addTodo={addTodo} />

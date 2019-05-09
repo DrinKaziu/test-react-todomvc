@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 
 import useInputState from '../hooks/useInputState';
