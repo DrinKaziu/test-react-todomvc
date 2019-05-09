@@ -41,17 +41,26 @@ function TodoApp() {
       
       <Grid container justify='center' style={{marginTop: '1rem'}}>
         <Grid item xs={11} md={8} lg={4}>
-          <AppBar color='default' position='static' style={{height: '64px', marginTop: '1rem'}}>
+          <AppBar color='primary' position='static' style={{height: '64px', marginTop: '1rem'}}>
             <Toolbar>
-              <Typography color='inherit'>To-Do</Typography>
+              <Typography color='inherit'>
+                {todos.length === 1 
+                  ?  
+                  <p><strong>{todos.length}</strong> task left</p> 
+                  : 
+                  <p><strong>{todos.length}</strong> tasks left</p>
+                }
+              </Typography>
             </Toolbar>
           </AppBar>
           <TodoForm addTodo={addTodo} />
-          <TodoList 
-            todos={todos} 
-            removeTodo={removeTodo} 
-            toggleComplete={toggleComplete}
-          />
+          {todos.length ? 
+            <TodoList 
+              todos={todos} 
+              removeTodo={removeTodo} 
+              toggleComplete={toggleComplete}
+            /> : null
+          }
         </Grid>
       </Grid>
     </Paper>

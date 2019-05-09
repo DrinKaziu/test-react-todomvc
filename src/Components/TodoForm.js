@@ -5,9 +5,8 @@ import TextField from '@material-ui/core/TextField';
 
 import useInputState from '../hooks/useInputState';
 
-function TodoForm(props) {
+function TodoForm({ addTodo }) {
   const [value, handleChange, reset] = useInputState('');
-  const { addTodo } = props;
   return (
     <Paper style={{margin: '1rem 0', padding: '0 1rem'}}>
       <form 
@@ -21,7 +20,7 @@ function TodoForm(props) {
           value={value} 
           onChange={handleChange} 
           margin='dense' 
-          label='New' 
+          label='Add New Task' 
           fullWidth
         />
       </form>
