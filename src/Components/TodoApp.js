@@ -31,7 +31,7 @@ function TodoApp() {
     setTodos(updatedTodos);
   }
   return (
-    <Paper className='TodoApp'> 
+    <Paper className='Todo' elevation={0}> 
       <Grid className='TodoApp-container' container justify='center'>
         <Grid item xs={11} md={8} lg={4}>
           <AppBar className='TodoApp-appbar' color='primary' position='static'>
