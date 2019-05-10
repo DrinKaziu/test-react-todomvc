@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 
 import TodoList from './TodoList';
 import TodoForm from './TodoForm';
+import '../styles/TodoApp.css';
 
 function TodoApp() {
   const initialTodos = [
@@ -30,18 +31,10 @@ function TodoApp() {
     setTodos(updatedTodos);
   }
   return (
-    <Paper 
-      style={{
-        padding: 0,
-        margin: 0,
-        height: '100vh',
-        backgroundColor: '#fafafa'
-      }}
-    >
-      
-      <Grid container justify='center' style={{marginTop: '1rem'}}>
+    <Paper className='TodoApp'> 
+      <Grid className='TodoApp-container' container justify='center'>
         <Grid item xs={11} md={8} lg={4}>
-          <AppBar color='primary' position='static' style={{height: '64px', marginTop: '1rem'}}>
+          <AppBar className='TodoApp-appbar' color='primary' position='static'>
             <Toolbar>
             {todos.length === 1 
               ?

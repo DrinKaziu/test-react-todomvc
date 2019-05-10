@@ -1,0 +1,15 @@
+.TodoApp {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #fafafa
+}
+
+.TodoApp-container {
+  margin-top: 1rem;
+}
+
+.TodoApp-appbar {
+  height: 64px;
+  margin-top: 1rem;
+}
